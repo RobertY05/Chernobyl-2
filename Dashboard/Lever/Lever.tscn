@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://uiphp15eie40"]
+
+[ext_resource type="Script" path="res://Dashboard/Lever/lever.gd" id="1_575nv"]
+[ext_resource type="Texture2D" uid="uid://b4c1giunb3cbd" path="res://Textures/Dashboard/Lever/lever_background.png" id="2_l57qy"]
+[ext_resource type="Texture2D" uid="uid://bv0b5v11a3x15" path="res://Textures/Dashboard/Lever/lever_mask.png" id="3_ci7i3"]
+[ext_resource type="Texture2D" uid="uid://cg54c5eiemrck" path="res://Textures/Dashboard/Lever/lever_bicolour.png" id="4_ld534"]
+[ext_resource type="Texture2D" uid="uid://cefaq1cssegqd" path="res://Textures/Dashboard/Lever/lever_handle.png" id="5_ae3br"]
+[ext_resource type="Texture2D" uid="uid://qg1ym0ubnk7y" path="res://Textures/Dashboard/Lever/lever_handle_shadow.png" id="6_7hqag"]
+[ext_resource type="AudioStream" uid="uid://ntjx6ihi6w3y" path="res://Sounds/pump_sound.mp3" id="7_vqosi"]
+[ext_resource type="AudioStream" uid="uid://mwswcfh00y10" path="res://Sounds/switch.mp3" id="8_g1s07"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1244f"]
+size = Vector2(158, 25)
+
+[node name="Lever" type="Node2D"]
+script = ExtResource("1_575nv")
+
+[node name="LeverBackground" type="Sprite2D" parent="."]
+texture = ExtResource("2_l57qy")
+
+[node name="LeverMask" type="Sprite2D" parent="."]
+clip_children = 1
+texture = ExtResource("3_ci7i3")
+
+[node name="Bicolour" type="Sprite2D" parent="LeverMask"]
+position = Vector2(0, -50)
+scale = Vector2(1, 1.75134)
+texture = ExtResource("4_ld534")
+
+[node name="LeverHandle" type="Sprite2D" parent="."]
+position = Vector2(0, -50)
+texture = ExtResource("5_ae3br")
+
+[node name="LeverHandleShadow" type="Sprite2D" parent="LeverHandle"]
+modulate = Color(0, 0, 0, 0.627451)
+position = Vector2(-1, 13)
+texture = ExtResource("6_7hqag")
+offset = Vector2(0, 0.5)
+
+[node name="Area2D" type="Area2D" parent="LeverHandle"]
+position = Vector2(0, 50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeverHandle/Area2D"]
+position = Vector2(1, -50.5)
+shape = SubResource("RectangleShape2D_1244f")
+
+[node name="PressureCooldown" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="PumpAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_vqosi")
+volume_db = -20.0
+autoplay = true
+
+[node name="JamAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_g1s07")
+volume_db = 5.0
+pitch_scale = 2.5
+
+[connection signal="input_event" from="LeverHandle/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="timeout" from="PressureCooldown" to="." method="_on_pressure_cooldown_timeout"]

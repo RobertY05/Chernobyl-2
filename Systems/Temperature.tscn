@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://dkn7tgvukkkb7"]
+
+[ext_resource type="Script" path="res://Systems/temperature.gd" id="1_3lslm"]
+[ext_resource type="PackedScene" uid="uid://uiphp15eie40" path="res://Dashboard/Lever/Lever.tscn" id="3_kipo1"]
+[ext_resource type="PackedScene" uid="uid://ebdcq0fc56w" path="res://Dashboard/Meter/Meter.tscn" id="4_qewh8"]
+[ext_resource type="PackedScene" uid="uid://b2viyh3ijr7ys" path="res://Dashboard/WarningTint/WarningTint.tscn" id="5_cnmw2"]
+[ext_resource type="PackedScene" uid="uid://cgyc15lhnts7h" path="res://Dashboard/Grabbables/Key/key.tscn" id="7_iltp6"]
+[ext_resource type="AudioStream" uid="uid://nv8j0e1dlhkj" path="res://Sounds/overheat_alarm.mp3" id="8_gpt1d"]
+[ext_resource type="PackedScene" uid="uid://cxf42ifps5yv2" path="res://Dashboard/Keyhole/Keyhole.tscn" id="8_xelmr"]
+
+[node name="Temperature" type="Node2D"]
+script = ExtResource("1_3lslm")
+
+[node name="TemperatureTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="Lever" parent="." instance=ExtResource("3_kipo1")]
+position = Vector2(963, 369)
+
+[node name="TemperatureMeter" parent="." instance=ExtResource("4_qewh8")]
+position = Vector2(160, 240)
+
+[node name="PressureMeter" parent="." instance=ExtResource("4_qewh8")]
+position = Vector2(160, 310)
+
+[node name="FlowMeter" parent="." instance=ExtResource("4_qewh8")]
+position = Vector2(160, 380)
+
+[node name="WarningTint" parent="." instance=ExtResource("5_cnmw2")]
+
+[node name="Keyhole" parent="." instance=ExtResource("8_xelmr")]
+position = Vector2(455, 424)
+
+[node name="Key" parent="." instance=ExtResource("7_iltp6")]
+visible = false
+position = Vector2(455, 424)
+
+[node name="WarningAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_gpt1d")
+volume_db = -19.0
+parameters/looping = true
+
+[connection signal="timeout" from="TemperatureTimer" to="." method="_on_temperature_timer_timeout"]
+[connection signal="lever_grabbed" from="Lever" to="." method="_on_lever_lever_grabbed"]
+[connection signal="lever_released" from="Lever" to="." method="_on_lever_lever_released"]
+[connection signal="key_inserted" from="Keyhole" to="." method="_on_keyhole_key_inserted"]
+[connection signal="key_removed" from="Keyhole" to="." method="_on_keyhole_key_removed"]

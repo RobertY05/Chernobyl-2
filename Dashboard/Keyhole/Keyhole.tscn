@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxf42ifps5yv2"]
+
+[ext_resource type="Script" path="res://Dashboard/Keyhole/keyhole.gd" id="1_jvjda"]
+[ext_resource type="Texture2D" uid="uid://dsph8yp5j55on" path="res://Textures/Dashboard/Keyhole/keyhole.png" id="2_3xssd"]
+[ext_resource type="Texture2D" uid="uid://dpjduk8xcft06" path="res://Textures/Dashboard/Keyhole/key_inserted.png" id="3_nmyq2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ehdx"]
+radius = 39.0128
+
+[node name="Keyhole" type="Area2D"]
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource("1_jvjda")
+
+[node name="Hole" type="Sprite2D" parent="."]
+texture = ExtResource("2_3xssd")
+
+[node name="Key" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_nmyq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8ehdx")
+
+[node name="RemoveKeyTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="timeout" from="RemoveKeyTimer" to="." method="_on_remove_key_timer_timeout"]

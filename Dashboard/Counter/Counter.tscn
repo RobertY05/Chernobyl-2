@@ -1,0 +1,60 @@
+[gd_scene load_steps=13 format=3 uid="uid://dnalvd38qd1m0"]
+
+[ext_resource type="Script" path="res://Dashboard/counter.gd" id="1_0756d"]
+[ext_resource type="Texture2D" uid="uid://diye1fjjw34et" path="res://Textures/Dashboard/Counter/NumberScreen0.png" id="1_qheql"]
+[ext_resource type="Texture2D" uid="uid://bo3uhf37wuhvj" path="res://Textures/Dashboard/Counter/NumberScreen1.png" id="2_jn08b"]
+[ext_resource type="Texture2D" uid="uid://o6gqrj8dkphq" path="res://Textures/Dashboard/Counter/NumberScreen2.png" id="3_jeesg"]
+[ext_resource type="Texture2D" uid="uid://cqs4uwpkc3bvl" path="res://Textures/Dashboard/Counter/NumberScreen3.png" id="4_a68ok"]
+[ext_resource type="Texture2D" uid="uid://cukolrbwdp7ts" path="res://Textures/Dashboard/Counter/NumberScreen4.png" id="5_qe01p"]
+[ext_resource type="Texture2D" uid="uid://1xe2osbctsr8" path="res://Textures/Dashboard/Counter/NumberScreen5.png" id="6_6yrhe"]
+[ext_resource type="Texture2D" uid="uid://du7de1xxfo6hk" path="res://Textures/Dashboard/Counter/NumberScreen6.png" id="7_a7f6h"]
+[ext_resource type="Texture2D" uid="uid://n61x3s8ds08d" path="res://Textures/Dashboard/Counter/NumberScreen7.png" id="8_ykfq1"]
+[ext_resource type="Texture2D" uid="uid://dt2wqi8l11u2a" path="res://Textures/Dashboard/Counter/NumberScreen8.png" id="9_kt7wj"]
+[ext_resource type="Texture2D" uid="uid://crn4mvu0uu68o" path="res://Textures/Dashboard/Counter/NumberScreen9.png" id="10_tmeli"]
+[ext_resource type="Texture2D" uid="uid://b8a1l4pnffoip" path="res://Textures/Dashboard/Counter/NumberScreenShine.png" id="11_as6hl"]
+
+[node name="Counter" type="Node2D"]
+script = ExtResource("1_0756d")
+
+[node name="0" type="Sprite2D" parent="."]
+texture = ExtResource("1_qheql")
+
+[node name="1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_jn08b")
+
+[node name="2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_jeesg")
+
+[node name="3" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_a68ok")
+
+[node name="4" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_qe01p")
+
+[node name="5" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_6yrhe")
+
+[node name="6" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("7_a7f6h")
+
+[node name="7" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("8_ykfq1")
+
+[node name="8" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("9_kt7wj")
+
+[node name="9" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("10_tmeli")
+
+[node name="Shine" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.247059)
+texture = ExtResource("11_as6hl")

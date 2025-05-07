@@ -1,0 +1,366 @@
+[gd_scene load_steps=3 format=3 uid="uid://jbsofvbcf543"]
+
+[ext_resource type="Script" path="res://Dashboard/LightGrid/light_grid.gd" id="1_j07ne"]
+[ext_resource type="PackedScene" uid="uid://ci8sjao5wkale" path="res://Dashboard/LightGrid/LightSmall.tscn" id="2_jl1v5"]
+
+[node name="LightGrid" type="Node2D"]
+script = ExtResource("1_j07ne")
+
+[node name="Row1" type="Node2D" parent="."]
+
+[node name="LightSmall" parent="Row1" instance=ExtResource("2_jl1v5")]
+position = Vector2(517, 220)
+
+[node name="LightSmall2" parent="Row1" instance=ExtResource("2_jl1v5")]
+position = Vector2(537, 220)
+
+[node name="LightSmall3" parent="Row1" instance=ExtResource("2_jl1v5")]
+position = Vector2(557, 220)
+
+[node name="LightSmall4" parent="Row1" instance=ExtResource("2_jl1v5")]
+position = Vector2(577, 220)
+
+[node name="LightSmall5" parent="Row1" instance=ExtResource("2_jl1v5")]
+position = Vector2(598, 220)
+
+[node name="LightSmall6" parent="Row1" instance=ExtResource("2_jl1v5")]
+position = Vector2(618, 220)
+
+[node name="LightSmall7" parent="Row1" instance=ExtResource("2_jl1v5")]
+position = Vector2(638, 220)
+
+[node name="LightSmall8" parent="Row1" instance=ExtResource("2_jl1v5")]
+position = Vector2(658, 220)
+
+[node name="LightSmall9" parent="Row1" instance=ExtResource("2_jl1v5")]
+position = Vector2(677, 220)
+
+[node name="Row2" type="Node2D" parent="."]
+position = Vector2(0, 20)
+
+[node name="LightSmall" parent="Row2" instance=ExtResource("2_jl1v5")]
+position = Vector2(517, 220)
+
+[node name="LightSmall2" parent="Row2" instance=ExtResource("2_jl1v5")]
+position = Vector2(537, 220)
+
+[node name="LightSmall3" parent="Row2" instance=ExtResource("2_jl1v5")]
+position = Vector2(557, 220)
+
+[node name="LightSmall4" parent="Row2" instance=ExtResource("2_jl1v5")]
+position = Vector2(577, 220)
+
+[node name="LightSmall5" parent="Row2" instance=ExtResource("2_jl1v5")]
+position = Vector2(598, 220)
+
+[node name="LightSmall6" parent="Row2" instance=ExtResource("2_jl1v5")]
+position = Vector2(618, 220)
+
+[node name="LightSmall7" parent="Row2" instance=ExtResource("2_jl1v5")]
+position = Vector2(638, 220)
+
+[node name="LightSmall8" parent="Row2" instance=ExtResource("2_jl1v5")]
+position = Vector2(658, 220)
+
+[node name="LightSmall9" parent="Row2" instance=ExtResource("2_jl1v5")]
+position = Vector2(677, 220)
+
+[node name="Row3" type="Node2D" parent="."]
+position = Vector2(0, 40)
+
+[node name="LightSmall" parent="Row3" instance=ExtResource("2_jl1v5")]
+position = Vector2(517, 220)
+
+[node name="LightSmall2" parent="Row3" instance=ExtResource("2_jl1v5")]
+position = Vector2(537, 220)
+
+[node name="LightSmall3" parent="Row3" instance=ExtResource("2_jl1v5")]
+position = Vector2(557, 220)
+
+[node name="LightSmall4" parent="Row3" instance=ExtResource("2_jl1v5")]
+position = Vector2(577, 220)
+
+[node name="LightSmall5" parent="Row3" instance=ExtResource("2_jl1v5")]
+position = Vector2(598, 220)
+
+[node name="LightSmall6" parent="Row3" instance=ExtResource("2_jl1v5")]
+position = Vector2(618, 220)
+
+[node name="LightSmall7" parent="Row3" instance=ExtResource("2_jl1v5")]
+position = Vector2(638, 220)
+
+[node name="LightSmall8" parent="Row3" instance=ExtResource("2_jl1v5")]
+position = Vector2(658, 220)
+
+[node name="LightSmall9" parent="Row3" instance=ExtResource("2_jl1v5")]
+position = Vector2(677, 220)
+
+[node name="Row4" type="Node2D" parent="."]
+position = Vector2(0, 60)
+
+[node name="LightSmall" parent="Row4" instance=ExtResource("2_jl1v5")]
+position = Vector2(517, 220)
+
+[node name="LightSmall2" parent="Row4" instance=ExtResource("2_jl1v5")]
+position = Vector2(537, 220)
+
+[node name="LightSmall3" parent="Row4" instance=ExtResource("2_jl1v5")]
+position = Vector2(557, 220)
+
+[node name="LightSmall4" parent="Row4" instance=ExtResource("2_jl1v5")]
+position = Vector2(577, 220)
+
+[node name="LightSmall5" parent="Row4" instance=ExtResource("2_jl1v5")]
+position = Vector2(598, 220)
+
+[node name="LightSmall6" parent="Row4" instance=ExtResource("2_jl1v5")]
+position = Vector2(618, 220)
+
+[node name="LightSmall7" parent="Row4" instance=ExtResource("2_jl1v5")]
+position = Vector2(638, 220)
+
+[node name="LightSmall8" parent="Row4" instance=ExtResource("2_jl1v5")]
+position = Vector2(658, 220)
+
+[node name="LightSmall9" parent="Row4" instance=ExtResource("2_jl1v5")]
+position = Vector2(677, 220)
+
+[node name="Row5" type="Node2D" parent="."]
+position = Vector2(0, 80)
+
+[node name="LightSmall" parent="Row5" instance=ExtResource("2_jl1v5")]
+position = Vector2(517, 220)
+
+[node name="LightSmall2" parent="Row5" instance=ExtResource("2_jl1v5")]
+position = Vector2(537, 220)
+
+[node name="LightSmall3" parent="Row5" instance=ExtResource("2_jl1v5")]
+position = Vector2(557, 220)
+
+[node name="LightSmall4" parent="Row5" instance=ExtResource("2_jl1v5")]
+position = Vector2(577, 220)
+
+[node name="LightSmall5" parent="Row5" instance=ExtResource("2_jl1v5")]
+position = Vector2(598, 220)
+
+[node name="LightSmall6" parent="Row5" instance=ExtResource("2_jl1v5")]
+position = Vector2(618, 220)
+
+[node name="LightSmall7" parent="Row5" instance=ExtResource("2_jl1v5")]
+position = Vector2(638, 220)
+
+[node name="LightSmall8" parent="Row5" instance=ExtResource("2_jl1v5")]
+position = Vector2(658, 220)
+
+[node name="LightSmall9" parent="Row5" instance=ExtResource("2_jl1v5")]
+position = Vector2(677, 220)
+
+[node name="Row6" type="Node2D" parent="."]
+position = Vector2(0, 100)
+
+[node name="LightSmall" parent="Row6" instance=ExtResource("2_jl1v5")]
+position = Vector2(517, 220)
+
+[node name="LightSmall2" parent="Row6" instance=ExtResource("2_jl1v5")]
+position = Vector2(537, 220)
+
+[node name="LightSmall3" parent="Row6" instance=ExtResource("2_jl1v5")]
+position = Vector2(557, 220)
+
+[node name="LightSmall4" parent="Row6" instance=ExtResource("2_jl1v5")]
+position = Vector2(577, 220)
+
+[node name="LightSmall5" parent="Row6" instance=ExtResource("2_jl1v5")]
+position = Vector2(598, 220)
+
+[node name="LightSmall6" parent="Row6" instance=ExtResource("2_jl1v5")]
+position = Vector2(618, 220)
+
+[node name="LightSmall7" parent="Row6" instance=ExtResource("2_jl1v5")]
+position = Vector2(638, 220)
+
+[node name="LightSmall8" parent="Row6" instance=ExtResource("2_jl1v5")]
+position = Vector2(658, 220)
+
+[node name="LightSmall9" parent="Row6" instance=ExtResource("2_jl1v5")]
+position = Vector2(677, 220)
+
+[node name="Row7" type="Node2D" parent="."]
+position = Vector2(0, 120)
+
+[node name="LightSmall" parent="Row7" instance=ExtResource("2_jl1v5")]
+position = Vector2(517, 220)
+
+[node name="LightSmall2" parent="Row7" instance=ExtResource("2_jl1v5")]
+position = Vector2(537, 220)
+
+[node name="LightSmall3" parent="Row7" instance=ExtResource("2_jl1v5")]
+position = Vector2(557, 220)
+
+[node name="LightSmall4" parent="Row7" instance=ExtResource("2_jl1v5")]
+position = Vector2(577, 220)
+
+[node name="LightSmall5" parent="Row7" instance=ExtResource("2_jl1v5")]
+position = Vector2(598, 220)
+
+[node name="LightSmall6" parent="Row7" instance=ExtResource("2_jl1v5")]
+position = Vector2(618, 220)
+
+[node name="LightSmall7" parent="Row7" instance=ExtResource("2_jl1v5")]
+position = Vector2(638, 220)
+
+[node name="LightSmall8" parent="Row7" instance=ExtResource("2_jl1v5")]
+position = Vector2(658, 220)
+
+[node name="LightSmall9" parent="Row7" instance=ExtResource("2_jl1v5")]
+position = Vector2(677, 220)
+
+[node name="Row8" type="Node2D" parent="."]
+position = Vector2(0, 140)
+
+[node name="LightSmall" parent="Row8" instance=ExtResource("2_jl1v5")]
+position = Vector2(517, 220)
+
+[node name="LightSmall2" parent="Row8" instance=ExtResource("2_jl1v5")]
+position = Vector2(537, 220)
+
+[node name="LightSmall3" parent="Row8" instance=ExtResource("2_jl1v5")]
+position = Vector2(557, 220)
+
+[node name="LightSmall4" parent="Row8" instance=ExtResource("2_jl1v5")]
+position = Vector2(577, 220)
+
+[node name="LightSmall5" parent="Row8" instance=ExtResource("2_jl1v5")]
+position = Vector2(598, 220)
+
+[node name="LightSmall6" parent="Row8" instance=ExtResource("2_jl1v5")]
+position = Vector2(618, 220)
+
+[node name="LightSmall7" parent="Row8" instance=ExtResource("2_jl1v5")]
+position = Vector2(638, 220)
+
+[node name="LightSmall8" parent="Row8" instance=ExtResource("2_jl1v5")]
+position = Vector2(658, 220)
+
+[node name="LightSmall9" parent="Row8" instance=ExtResource("2_jl1v5")]
+position = Vector2(677, 220)
+
+[node name="Row9" type="Node2D" parent="."]
+position = Vector2(0, 160)
+
+[node name="LightSmall" parent="Row9" instance=ExtResource("2_jl1v5")]
+position = Vector2(517, 220)
+
+[node name="LightSmall2" parent="Row9" instance=ExtResource("2_jl1v5")]
+position = Vector2(537, 220)
+
+[node name="LightSmall3" parent="Row9" instance=ExtResource("2_jl1v5")]
+position = Vector2(557, 220)
+
+[node name="LightSmall4" parent="Row9" instance=ExtResource("2_jl1v5")]
+position = Vector2(577, 220)
+
+[node name="LightSmall5" parent="Row9" instance=ExtResource("2_jl1v5")]
+position = Vector2(598, 220)
+
+[node name="LightSmall6" parent="Row9" instance=ExtResource("2_jl1v5")]
+position = Vector2(618, 220)
+
+[node name="LightSmall7" parent="Row9" instance=ExtResource("2_jl1v5")]
+position = Vector2(638, 220)
+
+[node name="LightSmall8" parent="Row9" instance=ExtResource("2_jl1v5")]
+position = Vector2(658, 220)
+
+[node name="LightSmall9" parent="Row9" instance=ExtResource("2_jl1v5")]
+position = Vector2(677, 220)
+
+[node name="Row10" type="Node2D" parent="."]
+position = Vector2(0, 180)
+
+[node name="LightSmall" parent="Row10" instance=ExtResource("2_jl1v5")]
+position = Vector2(517, 220)
+
+[node name="LightSmall2" parent="Row10" instance=ExtResource("2_jl1v5")]
+position = Vector2(537, 220)
+
+[node name="LightSmall3" parent="Row10" instance=ExtResource("2_jl1v5")]
+position = Vector2(557, 220)
+
+[node name="LightSmall4" parent="Row10" instance=ExtResource("2_jl1v5")]
+position = Vector2(577, 220)
+
+[node name="LightSmall5" parent="Row10" instance=ExtResource("2_jl1v5")]
+position = Vector2(598, 220)
+
+[node name="LightSmall6" parent="Row10" instance=ExtResource("2_jl1v5")]
+position = Vector2(618, 220)
+
+[node name="LightSmall7" parent="Row10" instance=ExtResource("2_jl1v5")]
+position = Vector2(638, 220)
+
+[node name="LightSmall8" parent="Row10" instance=ExtResource("2_jl1v5")]
+position = Vector2(658, 220)
+
+[node name="LightSmall9" parent="Row10" instance=ExtResource("2_jl1v5")]
+position = Vector2(677, 220)
+
+[node name="Row11" type="Node2D" parent="."]
+position = Vector2(0, 200)
+
+[node name="LightSmall" parent="Row11" instance=ExtResource("2_jl1v5")]
+position = Vector2(517, 220)
+
+[node name="LightSmall2" parent="Row11" instance=ExtResource("2_jl1v5")]
+position = Vector2(537, 220)
+
+[node name="LightSmall3" parent="Row11" instance=ExtResource("2_jl1v5")]
+position = Vector2(557, 220)
+
+[node name="LightSmall4" parent="Row11" instance=ExtResource("2_jl1v5")]
+position = Vector2(577, 220)
+
+[node name="LightSmall5" parent="Row11" instance=ExtResource("2_jl1v5")]
+position = Vector2(598, 220)
+
+[node name="LightSmall6" parent="Row11" instance=ExtResource("2_jl1v5")]
+position = Vector2(618, 220)
+
+[node name="LightSmall7" parent="Row11" instance=ExtResource("2_jl1v5")]
+position = Vector2(638, 220)
+
+[node name="LightSmall8" parent="Row11" instance=ExtResource("2_jl1v5")]
+position = Vector2(658, 220)
+
+[node name="LightSmall9" parent="Row11" instance=ExtResource("2_jl1v5")]
+position = Vector2(677, 220)
+
+[node name="Row12" type="Node2D" parent="."]
+position = Vector2(0, 220)
+
+[node name="LightSmall" parent="Row12" instance=ExtResource("2_jl1v5")]
+position = Vector2(517, 220)
+
+[node name="LightSmall2" parent="Row12" instance=ExtResource("2_jl1v5")]
+position = Vector2(537, 220)
+
+[node name="LightSmall3" parent="Row12" instance=ExtResource("2_jl1v5")]
+position = Vector2(557, 220)
+
+[node name="LightSmall4" parent="Row12" instance=ExtResource("2_jl1v5")]
+position = Vector2(577, 220)
+
+[node name="LightSmall5" parent="Row12" instance=ExtResource("2_jl1v5")]
+position = Vector2(598, 220)
+
+[node name="LightSmall6" parent="Row12" instance=ExtResource("2_jl1v5")]
+position = Vector2(618, 220)
+
+[node name="LightSmall7" parent="Row12" instance=ExtResource("2_jl1v5")]
+position = Vector2(638, 220)
+
+[node name="LightSmall8" parent="Row12" instance=ExtResource("2_jl1v5")]
+position = Vector2(658, 220)
+
+[node name="LightSmall9" parent="Row12" instance=ExtResource("2_jl1v5")]
+position = Vector2(677, 220)

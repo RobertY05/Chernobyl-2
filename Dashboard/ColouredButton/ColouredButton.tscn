@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://nesd7fy1s1jh"]
+
+[ext_resource type="Script" path="res://Dashboard/ColouredButton/coloured_button.gd" id="1_23u7p"]
+[ext_resource type="Texture2D" uid="uid://dalwbex5g0wd4" path="res://Textures/Dashboard/ColouredButton/button.png" id="2_2uqtc"]
+[ext_resource type="Texture2D" uid="uid://cpo8jc3ed7wqt" path="res://Textures/Dashboard/ColouredButton/button_colourable.png" id="3_g1dnu"]
+[ext_resource type="Texture2D" uid="uid://xwjhlutgcxx1" path="res://Textures/Dashboard/ColouredButton/button_pressed.png" id="4_x3xph"]
+[ext_resource type="Texture2D" uid="uid://wuq3nihls2s7" path="res://Textures/Dashboard/ColouredButton/button_pressed_colourable.png" id="5_5t2on"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_22git"]
+radius = 27.0
+
+[node name="ColouredButton" type="Node2D"]
+script = ExtResource("1_23u7p")
+
+[node name="Button" type="Sprite2D" parent="."]
+texture = ExtResource("2_2uqtc")
+
+[node name="ColouredButton" type="Sprite2D" parent="Button"]
+texture = ExtResource("3_g1dnu")
+metadata/_edit_lock_ = true
+
+[node name="ButtonPressed" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_x3xph")
+
+[node name="ColouredButton" type="Sprite2D" parent="ButtonPressed"]
+texture = ExtResource("5_5t2on")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_22git")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

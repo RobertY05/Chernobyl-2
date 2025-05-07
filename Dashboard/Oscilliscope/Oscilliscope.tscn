@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmjjd1dhgly4q"]
+
+[ext_resource type="Script" path="res://Dashboard/Oscilliscope/oscilliscope.gd" id="1_r8oy8"]
+[ext_resource type="Texture2D" uid="uid://drnj7062qqmgx" path="res://Textures/Dashboard/Oscilliscope/oscilliscope.png" id="2_d6b32"]
+[ext_resource type="Texture2D" uid="uid://bajmerq058l10" path="res://Textures/Dashboard/Oscilliscope/oscilliscope_scratches.png" id="3_4xtg2"]
+
+[node name="Oscilliscope" type="Node2D"]
+script = ExtResource("1_r8oy8")
+
+[node name="Screen" type="Sprite2D" parent="."]
+texture = ExtResource("2_d6b32")
+
+[node name="Left" type="Marker2D" parent="."]
+position = Vector2(-134, 0)
+
+[node name="Right" type="Marker2D" parent="."]
+position = Vector2(133, 0)
+
+[node name="Bottom" type="Marker2D" parent="."]
+position = Vector2(0, 76)
+
+[node name="Top" type="Marker2D" parent="."]
+position = Vector2(0, -75)
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 1.0
+default_color = Color(0, 0.705882, 0, 1)
+
+[node name="Scratches" type="Sprite2D" parent="."]
+texture = ExtResource("3_4xtg2")

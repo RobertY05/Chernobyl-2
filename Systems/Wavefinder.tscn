@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1fum4e6ysch1"]
+
+[ext_resource type="Script" path="res://Systems/wavefinder.gd" id="1_8ptb4"]
+[ext_resource type="PackedScene" uid="uid://cmjjd1dhgly4q" path="res://Dashboard/Oscilliscope/Oscilliscope.tscn" id="4_a4yw8"]
+[ext_resource type="PackedScene" uid="uid://din3cxq1ln7kc" path="res://Dashboard/Slider/Slider.tscn" id="5_atoc5"]
+
+[node name="Wavefinder" type="Node2D"]
+script = ExtResource("1_8ptb4")
+
+[node name="Oscilliscope" parent="." instance=ExtResource("4_a4yw8")]
+position = Vector2(353, 295)
+
+[node name="SliderBrightness" parent="." instance=ExtResource("5_atoc5")]
+position = Vector2(228, 424)
+
+[node name="SliderLoss" parent="." instance=ExtResource("5_atoc5")]
+position = Vector2(273, 424)
+
+[node name="SliderAdd" parent="." instance=ExtResource("5_atoc5")]
+position = Vector2(318, 424)
+
+[node name="SliderSub" parent="." instance=ExtResource("5_atoc5")]
+position = Vector2(365, 424)
+
+[node name="GraphTimer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="GraphTimer" to="." method="_on_graph_timer_timeout"]

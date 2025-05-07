@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://p2rn7wc63tvx"]
+
+[ext_resource type="Script" path="res://Systems/light_count.gd" id="1_8ru4c"]
+[ext_resource type="PackedScene" uid="uid://jbsofvbcf543" path="res://Dashboard/LightGrid/LightGrid.tscn" id="2_yyui6"]
+[ext_resource type="PackedScene" uid="uid://cxf42ifps5yv2" path="res://Dashboard/Keyhole/Keyhole.tscn" id="3_ro68v"]
+[ext_resource type="PackedScene" uid="uid://b31w4h7h0hjdp" path="res://Dashboard/ColouredButton/MicroButton.tscn" id="4_fs6q0"]
+[ext_resource type="PackedScene" uid="uid://dnalvd38qd1m0" path="res://Dashboard/Counter/Counter.tscn" id="5_xbt7w"]
+
+[node name="LightCount" type="Node2D"]
+script = ExtResource("1_8ru4c")
+
+[node name="LightGrid" parent="." instance=ExtResource("2_yyui6")]
+
+[node name="Keyhole" parent="." instance=ExtResource("3_ro68v")]
+position = Vector2(830, 424)
+
+[node name="ButtonTens" parent="." instance=ExtResource("4_fs6q0")]
+position = Vector2(719, 425)
+_colour = Color(1, 0.3, 0.29, 1)
+
+[node name="ButtonOnes" parent="." instance=ExtResource("4_fs6q0")]
+position = Vector2(766, 425)
+_colour = Color(1, 0.301961, 0.290196, 1)
+
+[node name="ButtonSubmit" parent="." instance=ExtResource("4_fs6q0")]
+position = Vector2(808, 374)
+_colour = Color(1, 0.301961, 0.290196, 1)
+
+[node name="CounterTens" parent="." instance=ExtResource("5_xbt7w")]
+position = Vector2(720, 373)
+
+[node name="CounterOnes" parent="." instance=ExtResource("5_xbt7w")]
+position = Vector2(767, 373)
+
+[connection signal="key_inserted" from="Keyhole" to="." method="_on_keyhole_key_inserted"]
+[connection signal="key_removed" from="Keyhole" to="." method="_on_keyhole_key_removed"]
+[connection signal="button_pressed" from="ButtonTens" to="." method="_on_button_tens_button_pressed"]
+[connection signal="button_pressed" from="ButtonOnes" to="." method="_on_button_ones_button_pressed"]
+[connection signal="button_pressed" from="ButtonSubmit" to="." method="_on_button_submit_button_pressed"]

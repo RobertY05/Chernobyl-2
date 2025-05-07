@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://din3cxq1ln7kc"]
+
+[ext_resource type="Script" path="res://Dashboard/Slider/slider.gd" id="1_ylmsn"]
+[ext_resource type="Texture2D" uid="uid://djxvi35qqly72" path="res://Textures/Dashboard/SliderBox/slider_mask.png" id="2_vwwiq"]
+[ext_resource type="Texture2D" uid="uid://ddk8dh7clvu84" path="res://Textures/Dashboard/SliderBox/slider_bicolour.png" id="3_4xncs"]
+[ext_resource type="Texture2D" uid="uid://lmig8t0gfb4m" path="res://Textures/Dashboard/SliderBox/slider_handle.png" id="4_ln0t6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqthf"]
+size = Vector2(32, 14)
+
+[node name="Slider" type="Node2D"]
+script = ExtResource("1_ylmsn")
+
+[node name="SliderMask" type="Sprite2D" parent="."]
+clip_children = 2
+texture = ExtResource("2_vwwiq")
+
+[node name="Bicolour" type="Sprite2D" parent="SliderMask"]
+position = Vector2(0, 30)
+texture = ExtResource("3_4xncs")
+
+[node name="SliderHandle" type="Sprite2D" parent="."]
+position = Vector2(0, 30)
+texture = ExtResource("4_ln0t6")
+
+[node name="Area2D" type="Area2D" parent="SliderHandle"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SliderHandle/Area2D"]
+position = Vector2(0, -30)
+shape = SubResource("RectangleShape2D_eqthf")
+
+[node name="RumbleTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="input_event" from="SliderHandle/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="timeout" from="RumbleTimer" to="." method="_on_rumble_timer_timeout"]

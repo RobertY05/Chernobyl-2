@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsyumoi74ucds"]
+
+[ext_resource type="Script" path="res://Textbox/textbox.gd" id="1_1qqm8"]
+[ext_resource type="Texture2D" uid="uid://cumrridfxleh1" path="res://Textures/Textbox/Background.png" id="2_a0b8h"]
+[ext_resource type="AudioStream" uid="uid://cqf3gi1bv2pa3" path="res://Sounds/intercom_sound.mp3" id="3_u5pmk"]
+
+[node name="Textbox" type="Node2D"]
+script = ExtResource("1_1qqm8")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(636, 79)
+texture = ExtResource("2_a0b8h")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 233.0
+offset_top = 4.0
+offset_right = 1040.0
+offset_bottom = 153.0
+pivot_offset = Vector2(403, 77)
+text = "abc"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ShakeTimer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+
+[node name="IntercomAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_u5pmk")
+volume_db = 5.0
+pitch_scale = 2.0
+
+[connection signal="timeout" from="ShakeTimer" to="." method="_on_shake_timer_timeout"]

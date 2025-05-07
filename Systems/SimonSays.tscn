@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs67uy4k582ui"]
+
+[ext_resource type="Script" path="res://Systems/simon_says.gd" id="1_p3hnb"]
+[ext_resource type="PackedScene" uid="uid://d4mteu7e2gwp3" path="res://Dashboard/ColouredLight/ColouredLight.tscn" id="2_16pwg"]
+[ext_resource type="PackedScene" uid="uid://nesd7fy1s1jh" path="res://Dashboard/ColouredButton/ColouredButton.tscn" id="3_uc15b"]
+
+[node name="SimonSays" type="Node2D"]
+script = ExtResource("1_p3hnb")
+
+[node name="LightRed" parent="." instance=ExtResource("2_16pwg")]
+position = Vector2(753, 239)
+_colour = Color(1, 0.357326, 0.290208, 1)
+
+[node name="LightGreen" parent="." instance=ExtResource("2_16pwg")]
+position = Vector2(862, 239)
+_colour = Color(0.1215, 0.81, 0.1215, 1)
+
+[node name="LightBlue" parent="." instance=ExtResource("2_16pwg")]
+position = Vector2(972, 239)
+_colour = Color(0.272, 0.435767, 0.85, 1)
+
+[node name="ButtonGreen" parent="." instance=ExtResource("3_uc15b")]
+position = Vector2(727, 305)
+_colour = Color(0.072, 0.36, 0.072, 1)
+
+[node name="ButtonBlue" parent="." instance=ExtResource("3_uc15b")]
+position = Vector2(789, 305)
+_colour = Color(0.1679, 0.317793, 0.73, 1)
+
+[node name="ButtonRed" parent="." instance=ExtResource("3_uc15b")]
+position = Vector2(851, 305)
+_colour = Color(0.59, 0.1947, 0.1947, 1)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="button_pressed" from="ButtonGreen" to="." method="_on_button_green_button_pressed"]
+[connection signal="button_pressed" from="ButtonBlue" to="." method="_on_button_blue_button_pressed"]
+[connection signal="button_pressed" from="ButtonRed" to="." method="_on_button_red_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

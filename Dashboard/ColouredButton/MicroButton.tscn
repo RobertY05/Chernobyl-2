@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b31w4h7h0hjdp"]
+
+[ext_resource type="Script" path="res://Dashboard/ColouredButton/coloured_button.gd" id="1_t10ya"]
+[ext_resource type="Texture2D" uid="uid://jyp0yjv3m2cx" path="res://Textures/Dashboard/MicroButton/microbutton.png" id="2_02vqu"]
+[ext_resource type="Texture2D" uid="uid://cks0uiova6uk0" path="res://Textures/Dashboard/MicroButton/microbutton_pressed.png" id="3_bfssf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h2ig6"]
+radius = 9.05539
+
+[node name="MicroButton" type="Node2D"]
+script = ExtResource("1_t10ya")
+
+[node name="Button" type="Sprite2D" parent="."]
+
+[node name="ColouredButton" type="Sprite2D" parent="Button"]
+texture = ExtResource("2_02vqu")
+metadata/_edit_lock_ = true
+
+[node name="ButtonPressed" type="Sprite2D" parent="."]
+visible = false
+
+[node name="ColouredButton" type="Sprite2D" parent="ButtonPressed"]
+texture = ExtResource("3_bfssf")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_h2ig6")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
